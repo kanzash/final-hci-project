@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/650b2ee6eb.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>F o c u s</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!-- <nav class="nav navbar-light bg-light"> -->
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" id="task-tab" data-toggle="tab" 
+                        data-bs-placement="bottom" 
+                        title="Tasks" href="#tasks" role="tab" 
+                        aria-controls="tasks" 
+                        aria-selected="true">
+                        <img src="assets/icons/check-square.svg" alt="check-box-icon"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="focus-tab" data-toggle="tab" 
+                        data-bs-placement="bottom" 
+                        title="Focus" href="#focus" role="tab" 
+                        aria-controls="focus" aria-selected="false">
+                        <img src="assets/icons/clock.svg" alt="clock-icon"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="content-tab" data-toggle="tab" 
+                        data-bs-placement="bottom" 
+                        title="Content" href="#content" role="tab" 
+                        aria-controls="content" aria-selected="true">
+                        <img src="assets/icons/book-open.svg" alt="book-open-icon"/>
+                    </a>
+                </li>
+              </ul>
+        <!-- </nav> -->
+        <div class="tab-content" id="all-tab-content">
+            <div class="tab-pane fade show active" id="tasks" role="tabpanel" aria-labelledby="task-tab">
+                Tasks
+            </div>
+            <div class="tab-pane fade" id="focus" role="tabpanel" aria-labelledby="focus-tab">
+                Focus
+            </div>  
+            <div class="tab-pane fade text-dark" id="content" role="tabpanel" aria-labelledby="content-tab">
+                Content
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
