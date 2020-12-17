@@ -1,6 +1,12 @@
-focus {
-    background-image: url('assets/images/img1.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+.focus-bg-1 {
+  /* The image used */
+  background-image: url("assets/images/img2.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
