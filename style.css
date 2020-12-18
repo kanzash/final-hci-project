@@ -11,20 +11,113 @@
   background-size: cover;
 }
 
-.float{
+.right-chevron-float{
 	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:rgb(0, 0, 0);
+	width:80px;
+	height:80px;
+	bottom:50%;
+	right:0%;
   color:#FFF;
-  opacity: 0.5;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-.my-float{
-	margin-top: 20px;
+.left-chevron-float{
+	position:fixed;
+	width:80px;
+	height:80px;
+	bottom:50%;
+	left:0%;
+  color:#FFF;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.left-chevron-float:hover, .right-chevron-float:hover {
+  color: rgba(0,0,0,0.8);
+}
+
+.dot-one, .dot-two, .dot-three {
+  position:fixed;
+	width:80px;
+	height:80px;
+  bottom:0%;
+  color:#FFF;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.dot-one:hover, .dot-two:hover, .dot-three:hover {
+  color: black;
+}
+
+.dot-one{
+	left:48%;
+}
+
+.dot-two{
+	left:50%;
+}
+
+.dot-three{
+	left:52%;
+}
+
+.main-time{
+  position: absolute;
+  top:45%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color:#FFF;
+  
+}
+
+.am-pm{
+  position: absolute;
+  top:48%;
+  left:61%;
+  transform: translate(-50%, -50%);
+  color:#FFF;
+}
+
+.date{
+  position: absolute;
+  top:55%;
+  left:52%;
+  transform: translate(-50%, -50%);
+  color:#FFF;
+}
+
+.start-button{
+  position: absolute;
+  top:55%;
+  left:52%;
+  transform: translate(-50%, -50%);
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade-other {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
