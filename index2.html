@@ -106,7 +106,7 @@
                             <div class="input-group mb-3">
                                 <input id="new-task" type="text" class="form-control" placeholder="Add a new task..." aria-label="Add a new task" aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                  <button onclick="addNewTask()" class="btn btn-outline-secondary" type="button" id="new-task-add">Add</button>
+                                  <button onclick="addNewTask()"class="btn btn-outline-secondary" type="button" id="new-task-add">Add</button>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +187,7 @@
                             </div>
                         </section>
                         <div class="main-time">
-                            <span id="mainTimer" style="font-size: 128px;">25:03</span>
+                            <span id="mainTimer" style="font-size: 128px;">25:00</span>
                         </div>
                         <button 
                             id="start-timer-button"
@@ -197,7 +197,7 @@
                         </button>
                         <button 
                             id="stop-timer-button"
-                            onclick="clearInterval(myTimer);" type="button" class="btn btn-outline-light btn-lg" 
+                            onclick="stopTimer();" type="button" class="btn btn-outline-light btn-lg" 
                             style="position: absolute; top:55%; left:55%; transform: translate(-50%, -50%);">
                             Stop
                         </button>

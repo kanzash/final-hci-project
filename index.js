@@ -1,39 +1,52 @@
 var myTimer;
-   function clock() {
-     myTimer = setInterval(myClock, 1000);
-     var c = 25;
+//    function clock() {
+//      myTimer = setInterval(myClock, 1000);
+//      var c = 25;
 
-     function myClock() {
-       document.getElementById("demo").innerHTML = --c;
-       if (c == 0) {
-         clearInterval(myTimer);
-         alert("Reached zero");
-       }
-     }
-   }
+//      function myClock() {
+//        document.getElementById("demo").innerHTML = --c;
+//        if (c == 0) {
+//          clearInterval(myTimer);
+//          alert("Reached zero");
+//        }
+//      }
+//    }
 
 function resetTimer() {
 	element = document.getElementById("mainTimer")
 	element.textContent = '25:00'
 }
 
-
-function disableStopButton() {
-	document.getElementById("stop-timer-button").disabled = "true"
+function enableStartButton() {
+	var btn = document.getElementById("start-timer-button");
+	btn.disabled = false;
 }
 
 function enableStopButton() {
-	document.getElementById("stop-timer-button").disabled = "false"
-	document.getElementById("stop-timer-button").enabled = "true"
+	var btn = document.getElementById("stop-timer-button");
+	btn.disabled = false;
+}
+
+function disableStartButton() {
+	var btn = document.getElementById("start-timer-button");
+	btn.disabled = true;
+}
+
+function disableStopButton() {
+	var btn = document.getElementById("stop-timer-button");
+	btn.disabled = true;
 }
 
 
 function startTimer(duration, display) {
+
 	var timer = duration, minutes, seconds;
-	document.getElementById("stop-timer-button").disabled = "false"
-	document.getElementById("start-timer-button").disabled = "true"
-	enableStopButton()
-    setInterval(function () {
+
+	disableStartButton();
+	enableStopButton();
+
+
+    myTimer = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -42,11 +55,21 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = duration;
-        }
+        // if (--timer < 0) {
+        //     timer = duration;
+		// }
+		if (timer)
+		
+		--timer;
 	}, 1000);
 	
+}
+
+function stopTimer() {
+
+	clearInterval(myTimer);
+	enableStartButton();
+	disableStopButton();
 }
 
 function addNewList() {
