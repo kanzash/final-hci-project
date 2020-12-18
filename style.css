@@ -4,6 +4,7 @@
 .edit {
   position: relative;
   left: 0%;
+  float: right;
 }
 
 .delete {
