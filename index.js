@@ -49,3 +49,22 @@ function startTimer(duration, display) {
 	
 }
 
+function addNewList() {
+
+	// get text input
+	var list_name = document.getElementById('new-list').value;
+
+	// create new element
+	var new_list_item = document.createElement('button')
+	new_list_item.type = "button"
+	new_list_item.className = "list-group-item list-group-item-action"
+	new_list_item.innerText = list_name
+
+	// append element
+	var all_lists = document.getElementById('all-lists')
+	all_lists.appendChild(new_list_item)
+
+	// clear text field
+	document.getElementById('new-list').value = ""
+
+}

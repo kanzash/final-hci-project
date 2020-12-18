@@ -69,14 +69,13 @@
                         <!-- All Lists -->
                         <div class="col-2">
                             <div class="card">
-                                <div class="list-group list-group-flush">
+                                <div id="all-lists" class="list-group list-group-flush">
                                     <button type="button" class="list-group-item list-group-item-action">Personal</button>
-                                    <button type="button" class="list-group-item list-group-item-action">School</button>
                                 </div>
                                 <div class="input-group mb-3">
                                     <input id="new-list" type="text" class="form-control" placeholder="Add a new list..." aria-label="Add a new list" aria-describedby="button-addon2">
                                     <div class="input-group-append">
-                                      <button class="btn btn-outline-secondary" type="button" id="new-list-add">Add</button>
+                                      <button onclick="addNewList()" class="btn btn-outline-secondary" type="button" id="new-list-add">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -88,16 +87,19 @@
                         <div class="col-10">
                             <div class="card">
                                 <ul id="current-task-list" class="list-group list-group-flush">
+
                                     <li class="list-group-item">
                                         <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
                                         A to do list item. Say Alhamdhulilaah.
-                                        <a class="edit">
+                                        <a href=# class="edit" style="justify-content: right;">
                                             <i data-feather="edit" style="color: grey; height: 15px; width: 15px;"></i>
                                         </a>
-                                        <a class="delete">
+                                        <!-- <a href=# class="delete">
                                             <i data-feather="trash-2" style="color: red; height: 15px; width: 15px;"></i>
-                                        </a>
+                                        </a> -->
                                     </li>
+
+                                    
                                 </ul>
                             </div>
                             <div class="input-group mb-3">
