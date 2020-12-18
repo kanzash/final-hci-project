@@ -19,9 +19,9 @@
   <body onload="disableStopButton()">
     <div class="container-fluid">
         <!-- <nav class="nav navbar-light bg-light"> -->
-              <ul class="nav justify-content-center">
+              <ul class="nav nav-pills justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" id="task-tab" data-toggle="tab" 
+                    <a class="nav-link active" id="task-tab" data-toggle="pill" 
                         data-bs-placement="bottom" 
                         title="Tasks" href="#tasks" role="tab" 
                         aria-controls="tasks" 
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="focus-tab" data-toggle="tab" 
+                    <a class="nav-link" id="focus-tab" data-toggle="pill" 
                         data-bs-placement="bottom" 
                         title="Focus" href="#focus" role="tab" 
                         aria-controls="focus" aria-selected="false">
@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="content-tab" data-toggle="tab" 
+                    <a class="nav-link" id="content-tab" data-toggle="pill" 
                         data-bs-placement="bottom" 
                         title="Content" href="#content" role="tab" 
                         aria-controls="content" aria-selected="true">
@@ -85,14 +85,19 @@
                                     <li class="list-group-item">
                                         <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
                                         A to do list item. Say Alhamdhulilaah.
-                                        <button class="edit">Edit</button><button class="delete">Delete</button>
+                                        <a class="edit">
+                                            <i data-feather="edit" style="color: grey; height: 15px; width: 15px;"></i>
+                                        </a>
+                                        <a class="delete">
+                                            <i data-feather="trash-2" style="color: red; height: 15px; width: 15px;"></i>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="input-group mb-3">
                                 <input id="new-task" type="text" class="form-control" placeholder="Add a new task..." aria-label="Add a new task" aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
+                                  <button class="btn btn-outline-secondary" type="button" id="new-task-add">Add</button>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +115,7 @@
                         href="#focus-one" role="tab" 
                         aria-controls="focus-one" 
                         aria-selected="true">
-                        <i data-feather="circle" style="color: white;"></i>
+                        <i data-feather="circle" style="color: white; height: 15px; width: 15px;"></i>
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -118,7 +123,7 @@
                         href="#focus-two" role="tab" 
                         aria-controls="focus-two" 
                         aria-selected="false">
-                        <i data-feather="circle" style="color: white;"></i>
+                        <i data-feather="circle" style="color: white; height: 15px; width: 15px;"></i>
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -126,7 +131,7 @@
                         href="#focus-three" role="tab" 
                         aria-controls="focus-three" 
                         aria-selected="false">
-                        <i data-feather="circle" style="color: white;"></i>
+                        <i data-feather="circle" style="color: white; height: 15px; width: 15px;"></i>
                         </a>
                     </li>
                 </ul>
@@ -173,7 +178,7 @@
                             </div>
                         </section>
                         <div class="main-time">
-                            <span id="mainTimer" style="font-size: 128px;">25:00</span>
+                            <span id="mainTimer" style="font-size: 128px;">25:03</span>
                         </div>
                         <button 
                             id="start-timer-button"
@@ -187,7 +192,12 @@
                             style="position: absolute; top:55%; left:55%; transform: translate(-50%, -50%);">
                             Stop
                         </button>
-                        <a href=# style="position: absolute; top:60%; left:50%; transform: translate(-50%, -50%); color: white; font-weight: bold;">Reset</a>
+                        <button
+                            onclick="resetTimer()"
+                            type="button" class="btn btn-link"
+                            style="position: absolute; top:60%; left:50%; transform: translate(-50%, -50%); color: white; font-weight: bold;">
+                            Reset
+                        </button>
                         <a href=# style="position: absolute; top:63%; left:50%; transform: translate(-50%, -50%); color: white;">Adjust</a>
 
 
@@ -226,6 +236,7 @@
                             <div class="card-body">
                               <h5 class="card-title">How To Actually Wake Up Early</h5>
                               <p class="card-text">Your early morning routine actually begins the night before. Here are 5 simple steps to wake up early.</p>
+                              <a href="https://www.fastcompany.com/3041455/8-tricks-to-make-yourself-wake-up-earlier" class="card-link">Read More</a>
                             </div>
                           </div>
                         </div>
@@ -235,6 +246,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Start Taking Notes</h5>
                               <p class="card-text">If you thought note taking was something you only did in school, think again. Here's why you should be taking notes on everything.</p>
+                              <a href="https://fs.blog/2013/11/taking-notes-while-reading/" class="card-link">Read More</a>
                             </div>
                           </div>
                         </div>
@@ -244,6 +256,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Calendar Blocking Won't Help You</h5>
                               <p class="card-text">Before you fill up your calendar as much as possible, there is something else you should be doing first.</p>
+                              <a href="https://medium.com/2time-labs/why-people-who-use-time-blocking-are-never-free-ab7f8540a766" class="card-link">Read More</a>
                             </div>
                           </div>
                         </div>
@@ -258,6 +271,7 @@
                               <div class="card-body">
                                 <h5 class="card-title">Everything You Need To Know About Weekly Review</h5>
                                 <p class="card-text">If you are not doing a weekly review already, you are missing out. 3 reasons why everyone should be doing a weekly review.</p>
+                                <a href="https://www.youtube.com/watch?v=ZkyctYnujLs" class="card-link">Watch</a>
                               </div>
                             </div>
                           </div>
@@ -267,6 +281,7 @@
                               <div class="card-body">
                                 <h5 class="card-title">Put First Things First: The Golden Rule of Productivity</h5>
                                 <p class="card-text">Prioritization is the enemy of procrastination. Here's how to get your priorities in order.</p>
+                                <a href="https://www.youtube.com/watch?v=suGXZ1869qc" class="card-link">Watch</a>
                               </div>
                             </div>
                           </div>
@@ -276,6 +291,7 @@
                             <div class="card-body">
                               <h5 class="card-title">You Don't Need To Read More Books</h5>
                               <p class="card-text">Is your new years resolution to "read more"? Here's why reading more books isn't necessarily a good idea.</p>
+                              <a href="https://www.youtube.com/watch?v=eTFy8RnUkoU" class="card-link">Watch</a>
                             </div>
                           </div>
                         </div>
