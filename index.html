@@ -11,145 +11,231 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/650b2ee6eb.js" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
-  </head>
-  <body class="d-flex h-100 bg-dark.bg-gradient">
-    <!-- Optional JavaScript; choose one of the two! -->
-    <div class="float-right">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-                
-                    <a class="nav-link active" id="task-tab" data-bs-toggle="tab" data-bs-placement="bottom" title="Tasks" href="#tasks" role="tab" aria-controls="tasks" aria-selected="true"><i class="far fa-check-square fa-2x"></i></a>
-                
-            </li>
-            <li class="nav-item">
-                
-                    <a class="nav-link" id="focus-tab" data-bs-toggle="tab" data-bs-placement="bottom" title="Focus" href="#focus" role="tab" aria-controls="focus" aria-selected="false"><i class="fas fa-hourglass-half fa-2x"></i></a>
-                
-            </li>
-            <li class="nav-item">
-                
-                    <a class="nav-link" id="content-tab" data-bs-toggle="tab" data-bs-placement="bottom" title="Content" href="#content" role="tab" aria-controls="content" aria-selected="true"><i class="fas fa-book-open fa-2x"></i></a>
-                
-            </li>
-        </ul>
-        </div>
-      </div>
-      <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-    </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <div class="tab-content" id="all-tab-content">
-            <br>
-            <!-- Begin Task View -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>F o c u s</title>
+  </head>
+  <body onload="disableStopButton()">
+    <div class="container-fluid">
+        <!-- <nav class="nav navbar-light bg-light"> -->
+              <ul class="nav nav-pills justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" id="task-tab" data-toggle="pill" 
+                        data-bs-placement="bottom" 
+                        title="Tasks" href="#tasks" role="tab" 
+                        aria-controls="tasks" 
+                        aria-selected="true">
+                        <!-- <img src="assets/icons/check-square.svg" alt="check-box-icon"/> -->
+                        <i data-feather="check-square" style="color: black; fill-opacity: inherit;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="focus-tab" data-toggle="pill" 
+                        data-bs-placement="bottom" 
+                        title="Focus" href="#focus" role="tab" 
+                        aria-controls="focus" aria-selected="false">
+                        <!-- <img src="assets/icons/clock.svg" alt="clock-icon"/> -->
+                        <i data-feather="clock" style="color: black;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="content-tab" data-toggle="pill" 
+                        data-bs-placement="bottom" 
+                        title="Content" href="#content" role="tab" 
+                        aria-controls="content" aria-selected="true">
+                        <!-- <img src="assets/icons/book-open.svg" alt="book-open-icon"/> -->
+                        <i data-feather="book-open" style="color: black;"></i>
+                    </a>
+                </li>
+              </ul>
+        <!-- </nav> -->
+        <div class="tab-content" id="all-tab-content">
+
+            <!-- Tasks Start Here -->
             <div class="tab-pane fade show active" id="tasks" role="tabpanel" aria-labelledby="task-tab">
-                <!-- <div class="container">
-                    <nav class="navbar navbar-light bg-light">
-                      <a class="navbar-brand" href="#">Default</a>
+                <div class="container-fluid">
+
+                    <!-- Current List Header -->
+                    <nav class="navbar navbar-light bg-light justify-content-center">
+                        <span class="navbar-text">
+                            Personal
+                        </span>
                     </nav>
+
+
                     <div class="row">
+
+                        <!-- All Lists -->
                         <div class="col-2">
                             <div class="card">
-                                <div class="list-group list-group-flush">
-                                    <button type="button" class="list-group-item list-group-item-action active">
-                                      Inbox
-                                    </button>
-                                    <button type="button" class="list-group-item list-group-item-action">School</button>
-                                    <button type="button" class="list-group-item list-group-item-action">Work</button>
+                                <div id="all-lists" class="list-group list-group-flush">
                                     <button type="button" class="list-group-item list-group-item-action">Personal</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <div class="card">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                        A to do list item. Say Alhamdhulilaah.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-            <!-- End Task View -->
-            <!-- Focus View Start Here -->
-            <div class="tab-pane fade" id="focus" role="tabpanel" aria-labelledby="focus-tab">
-                    <div class="container">
-                        <section class="parallax text-center" data-background="assets/images/module-10.jpg" data-overlay="1" data-gradient="1" style="background-image: none; z-index: 0;" data-jarallax-original-styles="background-image: url(&quot;assets/images/module-10.jpg&quot;);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="space" data-my="60px" style="margin-top: 60px;"></div>
-                                        <h1 class="demo-heading"><strong>B<span>o</span>omerang</strong></h1>
-                                        <p class="m-b-40">Quickly create your One or Multi Page website in fastest<br> and easiest way with SASS and Pug based template.</p>
-                                        <div class="space" data-my="60px" style="margin-top: 60px;"></div>
+                                <div class="input-group mb-3">
+                                    <input id="new-list" type="text" class="form-control" placeholder="Add a new list..." aria-label="Add a new list" aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                      <button onclick="addNewList()" class="btn btn-outline-secondary" type="button" id="new-list-add">Add</button>
                                     </div>
                                 </div>
                             </div>
-                        <div class="overlay-background overlay-gradient" style="opacity: 1;"></div><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;" id="jarallax-container-0"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://themes.2the.me/Boomerang/1.3/assets/images/module-10.jpg&quot;); position: absolute; top: 0px; left: 0px; width: 1792px; height: 659.64px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: -41.32px; transform: translate3d(0px, 41.92px, 0px);"></div></div></section>
-                    </div>
-                    
-                        <div class="btn-group me-2" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-outline-secondary">1</button>
-                            <button type="button" class="btn btn-outline-secondary">2</button>
-                            <button type="button" class="btn btn-outline-secondary">3</button>
                         </div>
 
-                
-                    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <ol class="carousel-indicators">
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/images/img1.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block" id="date-display">
-                                <h1>2:30 p.m.</h1>
-                                <h2>December 25th, 2020</h2>
+                        <!-- All Lists Ends -->
+
+                        <!-- List Items To Do -->
+                        <div class="col-10">
+                            <div class="card">
+                                <ul id="current-task-list" class="list-group list-group-flush">
+
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                        Work on HCI assignment
+                                        <a href=# class="edit" style="padding-left: 8px;" data-bs-placement="bottom" title="Delete">
+                                            <i data-feather="trash-2" style="color: red; height: 15px; width: 15px;"></i>
+                                        </a>
+                                        <a href=# class="edit" data-bs-placement="bottom" title="Edit">
+                                            <i data-feather="edit" style="color: grey; height: 15px; width: 15px;"></i>
+                                        </a>
+                                        
+                                    </li>
+
+                                    
+                                </ul>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input id="new-task" type="text" class="form-control" placeholder="Add a new task..." aria-label="Add a new task" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                  <button onclick="addNewTask()"class="btn btn-outline-secondary" type="button" id="new-task-add">Add</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/img2.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle" id="timer-display">
-                                <h1>15:30</h1>
-                                <p>left</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/img3.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle" id="timer-display">
-                                <h1>How we spend our days is of course, how we spend our lives</h1>
-                                <p>Anne Dilliard, The Writing Life</p>
-                            </div>
-                        </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                        </a>
-                    </div> -->
+                        <!-- List Items To Do Ends -->
+
+                    </div>
+                </div>
             </div>
-            <!-- Focus View End Here -->
-            <!-- Content Section Start Here -->
+            <!-- Tasks End Here -->
+            <!-- Focus View Starts Here -->
+            <div class="tab-pane fade" id="focus" role="tabpanel" aria-labelledby="focus-tab">
+                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist" style="position: absolute; bottom: 0%; left: 50%; transform: translate(-50%, -50%);">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="focus-one-tab" data-toggle="pill" 
+                        href="#focus-one" role="tab" 
+                        aria-controls="focus-one" 
+                        aria-selected="true">
+                        <i data-feather="circle" style="color: white; height: 15px; width: 15px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="focus-two-tab" data-toggle="pill" 
+                        href="#focus-two" role="tab" 
+                        aria-controls="focus-two" 
+                        aria-selected="false">
+                        <i data-feather="circle" style="color: white; height: 15px; width: 15px;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="focus-three-tab" data-toggle="pill" 
+                        href="#focus-three" role="tab" 
+                        aria-controls="focus-three" 
+                        aria-selected="false">
+                        <i data-feather="circle" style="color: white; height: 15px; width: 15px;"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a class="right-chevron-float" onclick="plusSlides(1)">
+                    <i data-feather="chevron-right" style="height: 48px; width: 80px;"></i>
+                </a>
+                <a class="left-chevron-float" onclick="plusSlides(-1)">
+                    <i data-feather="chevron-left" style="height: 48px; width: 80px;"></i>
+                </a>
+                  <!-- Focus Slides Begin Here -->
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="focus-one" role="tabpanel" aria-labelledby="focus-one-tab">
+                        
+                        <section class="parallax text-center" id="focus-tab-one" data-background="assets/images/img1.jpg" data-overlay="1" data-gradient="1" style="background-image: none; z-index: 0;" data-jarallax-original-styles="background-image: url(&quot;assets/images/module-10.jpg&quot;);"> 
+                            <div class="overlay-background overlay-gradient" style="opacity: 1;">
+                            </div>
+                            <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;" id="jarallax-container-0">
+                                <div style="background-position: 100% 100%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;assets/images/img1.jpg&quot;); position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: -41.32px; transform: translate3d(0px, 41.92px, 0px);">
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="main-time">
+                            <h1 style="font-size: 128px;">10:53</h1>
+                        </div>
+                        <div class="am-pm">
+                            <h1 style="font-size: 48px;">AM</h1>
+                        </div>
+                        <div class="date">
+                            <h1 style="font-size: 42px;
+                            font-style: italic;
+                            font-weight: light;">Friday, December 18th, 2020</h1>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="focus-two" role="tabpanel" aria-labelledby="focus-two-tab">
+                        
+                        <section class="parallax text-center" id="focus-tab-one" data-background="assets/images/img1.jpg" data-overlay="1" data-gradient="1" style="background-image: none; z-index: 0;" data-jarallax-original-styles="background-image: url(&quot;assets/images/module-10.jpg&quot;);"> 
+                            <div class="overlay-background overlay-gradient" style="opacity: 1;">
+                            </div>
+                            <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;" id="jarallax-container-0">
+                                <div style="background-position: 100% 100%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;assets/images/img2.jpg&quot;); position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: -41.32px; transform: translate3d(0px, 41.92px, 0px);">
+                                </div>
+                            </div>
+                        </section>
+                        <div class="main-time">
+                            <span id="mainTimer" style="font-size: 128px;">25:00</span>
+                        </div>
+                        <button 
+                            id="start-timer-button"
+                            onclick="startTimer(25*60, document.getElementById('mainTimer'))" type="button" class="btn btn-outline-light btn-lg" 
+                            style="position: absolute; top:55%; left:45%; transform: translate(-50%, -50%);">
+                            Start
+                        </button>
+                        <button 
+                            id="stop-timer-button"
+                            onclick="stopTimer();" type="button" class="btn btn-outline-light btn-lg" 
+                            style="position: absolute; top:55%; left:55%; transform: translate(-50%, -50%);">
+                            Stop
+                        </button>
+                        <button
+                            onclick="resetTimer()"
+                            type="button" class="btn btn-link"
+                            style="position: absolute; top:60%; left:50%; transform: translate(-50%, -50%); color: white; font-weight: bold;">
+                            Reset
+                        </button>
+                        <a href=# style="position: absolute; top:63%; left:50%; transform: translate(-50%, -50%); color: white;">Adjust</a>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="focus-three" role="tabpanel" aria-labelledby="focus-three-tab">
+                        
+                        <section class="parallax text-center" id="focus-tab-one" data-background="assets/images/img1.jpg" data-overlay="1" data-gradient="1" style="background-image: none; z-index: 0;" data-jarallax-original-styles="background-image: url(&quot;assets/images/module-10.jpg&quot;);"> 
+                            <div class="overlay-background overlay-gradient" style="opacity: 1;">
+                            </div>
+                            <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;" id="jarallax-container-0">
+                                <div style="background-position: 100% 100%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;assets/images/img3.jpg&quot;); position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: -41.32px; transform: translate3d(0px, 41.92px, 0px);">
+                                </div>
+                            </div>
+                        </section>
+                        <div class="main-time">
+                            <h1 style="font-size: 48px; text-align: center;">How we spend our days is of course, how we spend our lives</h1>
+                            <h2 style="top: 50%; font-size: 28px; text-align: center; font-style: italic; font-weight: lighter;">-Annie Dilliard, The Writing Life</h2>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- Focus Slides End Here -->
+            </div>  
+            <!-- Focus View Ends Here -->
+            <!-- Content View Starts Here -->
             <div class="tab-pane fade text-dark" id="content" role="tabpanel" aria-labelledby="content-tab">
-                <div class="container">
+                <div class="container-fluid">
                     <h1>Articles</h1>
                     <hr>
                     <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -159,6 +245,7 @@
                             <div class="card-body">
                               <h5 class="card-title">How To Actually Wake Up Early</h5>
                               <p class="card-text">Your early morning routine actually begins the night before. Here are 5 simple steps to wake up early.</p>
+                              <a href="https://www.fastcompany.com/3041455/8-tricks-to-make-yourself-wake-up-earlier" class="card-link">Read More</a>
                             </div>
                           </div>
                         </div>
@@ -168,6 +255,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Start Taking Notes</h5>
                               <p class="card-text">If you thought note taking was something you only did in school, think again. Here's why you should be taking notes on everything.</p>
+                              <a href="https://fs.blog/2013/11/taking-notes-while-reading/" class="card-link">Read More</a>
                             </div>
                           </div>
                         </div>
@@ -177,6 +265,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Calendar Blocking Won't Help You</h5>
                               <p class="card-text">Before you fill up your calendar as much as possible, there is something else you should be doing first.</p>
+                              <a href="https://medium.com/2time-labs/why-people-who-use-time-blocking-are-never-free-ab7f8540a766" class="card-link">Read More</a>
                             </div>
                           </div>
                         </div>
@@ -191,6 +280,7 @@
                               <div class="card-body">
                                 <h5 class="card-title">Everything You Need To Know About Weekly Review</h5>
                                 <p class="card-text">If you are not doing a weekly review already, you are missing out. 3 reasons why everyone should be doing a weekly review.</p>
+                                <a href="https://www.youtube.com/watch?v=ZkyctYnujLs" class="card-link">Watch</a>
                               </div>
                             </div>
                           </div>
@@ -200,6 +290,7 @@
                               <div class="card-body">
                                 <h5 class="card-title">Put First Things First: The Golden Rule of Productivity</h5>
                                 <p class="card-text">Prioritization is the enemy of procrastination. Here's how to get your priorities in order.</p>
+                                <a href="https://www.youtube.com/watch?v=suGXZ1869qc" class="card-link">Watch</a>
                               </div>
                             </div>
                           </div>
@@ -209,15 +300,22 @@
                             <div class="card-body">
                               <h5 class="card-title">You Don't Need To Read More Books</h5>
                               <p class="card-text">Is your new years resolution to "read more"? Here's why reading more books isn't necessarily a good idea.</p>
+                              <a href="https://www.youtube.com/watch?v=eTFy8RnUkoU" class="card-link">Watch</a>
                             </div>
                           </div>
                         </div>
                       </div>
                 </div>
             </div>
-            <!-- Content Section End Here -->
-      </div>
+            <!-- Content View Ends Here -->
+        </div>
     </div>
+    <script>
+        feather.replace()
+    </script>
     <script type="text/javascript" src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
