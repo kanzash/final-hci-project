@@ -1,16 +1,4 @@
 var myTimer;
-//    function clock() {
-//      myTimer = setInterval(myClock, 1000);
-//      var c = 25;
-
-//      function myClock() {
-//        document.getElementById("demo").innerHTML = --c;
-//        if (c == 0) {
-//          clearInterval(myTimer);
-//          alert("Reached zero");
-//        }
-//      }
-//    }
 
 function resetTimer() {
 	element = document.getElementById("mainTimer")
@@ -38,6 +26,8 @@ function disableStopButton() {
 }
 
 
+// timer functionality taken from https://jsfiddle.net/robbmj/vpq5toeq/4/ (modified and adjusted for my use)
+
 function startTimer(duration, display) {
 
 	var timer = duration, minutes, seconds;
@@ -55,9 +45,6 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        // if (--timer < 0) {
-        //     timer = duration;
-		// }
 		if (timer)
 		
 		--timer;
@@ -138,8 +125,6 @@ function addNewTask() {
 	new_task_item.appendChild(delete_icon);
 
 	new_task_item.appendChild(edit_icon);
-
-	
 
 	// append to list
 
