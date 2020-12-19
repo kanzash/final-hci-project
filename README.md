@@ -47,4 +47,4 @@ Put First Things First: The Golden Rule of Productivity: <span>Photo by <a href=
 
 
 
-The quote featured is from [Anne Dillard](https://en.wikipedia.org/wiki/Annie_Dillard), in her book, [The Writing Life](https://www.goodreads.com/book/show/12530.The_Writing_Life)
+The quote featured is from [Annie Dillard](https://en.wikipedia.org/wiki/Annie_Dillard), in her book, [The Writing Life](https://www.goodreads.com/book/show/12530.The_Writing_Life)
